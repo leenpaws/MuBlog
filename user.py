@@ -46,6 +46,7 @@ class User(db.Model):
     def by_name(cls, name):
         # change upper case User to cls
         u = User.all().filter('name =', name).get()
+        print type(u), "this is u"
         return u
 
     @classmethod
