@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title></title>
+</head>
+
+<body>
+
+
+  <div class="login-area">
+    {% if user.name %}
+       <div class="post-heading"> <h2>Welcome, {{user.name}}!</h2>
+       (<a class="login-link" href="/logout">logout</a>)
+        <a class="newpost" href="/blog/?">new post</a>
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+</div>
+  <div id="content">
+  {% block content %}
+
+  {% endblock %}
+  </div>
+
+</body>
+
+</html>
+
